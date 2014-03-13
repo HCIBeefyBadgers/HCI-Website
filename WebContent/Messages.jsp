@@ -15,27 +15,34 @@
 		<form action="Messages" method="post">
 			<div class="friendDiv">
 				<ul>
-					<li><a href="#Joe" class="btn">Joe Bloggs</a>
+					<li><a href="#Joe" class="btn"
+						style="padding: 10px; font-size: large;">Joe Bloggs</a>
 						<hr></li>
-					<li><a href="#Hugh" class="btn">Hugh Major Masterson</a>
+					<li><a href="#Hugh" class="btn"
+						style="padding: 10px; font-size: large;">Hugh Major Masterson</a>
 						<hr></li>
-					<li><a href="#Hugh" class="btn">Marshal Flynn Victor</a>
+					<li><a href="#Marshal" class="btn"
+						style="padding: 10px; font-size: large;">Marshal Flynn Victor</a>
 						<hr></li>
-					<li><a href="#Hugh" class="btn">Benjy Zeph Danniel</a>
+					<li><a href="#Benjy" class="btn"
+						style="padding: 10px; font-size: large;">Benjy Zeph Danniel</a>
 						<hr></li>
-					<li><a href="#Hugh" class="btn">Braidy Codie Sessions</a>
+					<li><a href="#Braidy" class="btn"
+						style="padding: 10px; font-size: large;">Braidy Codie Sessions</a>
 						<hr></li>
-					<li><a href="#Hugh" class="btn">Guy Sinclair Smalls</a>
+					<li><a href="#Guy" class="btn"
+						style="padding: 10px; font-size: large;">Guy Sinclair Smalls</a>
 						<hr></li>
-					<li><a href="#Hugh" class="btn">Coty Ronald Toller</a>
+					<li><a href="#Coty" class="btn"
+						style="padding: 10px; font-size: large;">Coty Ronald Toller</a>
 						<hr></li>
 				</ul>
 			</div>
 			<div class="submitDiv">
 
 				Message:<input type="text" id="Message" name="Message"
-					class="MsoNormal" style="width:500px; height:50px;"><input type="submit" name="reply"
-					value="Send" class="btn-primary" />
+					class="MsoNormal" style="width: 500px; height: 50px;"><input
+					type="submit" name="reply" value="Send" class="btn-primary" />
 				<hr>
 			</div>
 			<div class="messageDiv">
@@ -44,7 +51,8 @@
 							.getAttribute("message");
 					if (lTweet == null) {
 				%>
-				<br><br>
+				<br>
+				<br>
 				<p class="MsoNormal">No messages found</p>
 				<%
 					} else {
