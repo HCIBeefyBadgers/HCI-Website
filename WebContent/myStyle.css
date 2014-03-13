@@ -1,0 +1,389 @@
+.mybtn {
+	background-color: #0000FF;
+	color: #FFFFFF;
+	font-weight: bold;
+	border: 1px solid #919191;
+	padding: 0 0 3px;
+	cursor: pointer;
+	background-color: #3333CC;
+	display: block;
+	text-align: center;
+	margin-top: 25px;
+	border-radius: 5px;
+	font-family: Verdana;
+	font-size: 13px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	color: #FFFFFF;
+	padding: 2px;
+}
+
+body {
+	background-color: lightblue;
+}
+
+.container {
+	background-color:black;
+	left:-280px;
+	top:-250px;
+	position:relative;
+	width: 400px;
+	height: 300px;
+	background: #444;
+	margin: 0 auto;
+}
+
+.container img.wide {
+	max-width: 100%;
+	max-height: 100%;
+	height: auto;
+}
+
+.container img.tall {
+	max-height: 100%;
+	max-width: 100%;
+	width: auto;
+}
+
+​
+
+BODY {
+	background-color: #99CCFF;
+}
+
+INPUT#shiny {
+	padding: 4px 20px;
+	/*give the background a gradient*/
+	background: #0000FF;
+	/*fallback for browsers that don't support gradients*/
+	background: -webkit-linear-gradient(top, #ffae00, #d67600);
+	background: -moz-linear-gradient(top, #ffae00, #d67600);
+	background: -o-linear-gradient(top, #ffae00, #d67600);
+	background: linear-gradient(top, #ffae00, #d67600);
+	border: 2px outset #DAD9D8;
+	/*style the text*/
+	font-family: Arial, sans-serif;
+	font-size: 1.1em;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	color: #FFF;
+	text-shadow: 0px 1px 10px #000;
+	/*add to small curve to the corners of the button*/
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	/*give the button a drop shadow*/
+	-webkit-box-shadow: rgba(0, 0, 0, .55) 0 1px 6px;
+	-moz-box-shadow: rgba(0, 0, 0, .55) 0 1px 6px;
+	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.55);
+}
+/****NOW STYLE THE BUTTON'S HOVER STATE***/
+INPUT#shiny:hover,INPUT#shiny:focus {
+	border: 2px solid #DAD9D8;
+}
+
+.Displaydiv {
+	border: 2px solid #A1A1A1;
+	padding: 10px;
+	background: #DDDDDD;
+	width: 300px;
+	-moz-border-radius: 25px;
+	background-color: #FFFFFF;
+	border-radius: 25px;
+	
+	left: 200px;
+	top: 300px;
+	position: absolute;
+	z-index: 2;
+	text-align: left;
+	font-style: italic;
+}
+
+UL {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+LI {
+	float: left;
+}
+
+.submitDiv {
+	background-color: #FFFFFF;
+	border-radius: 25px;
+	width: 580px;
+	height: 100px;
+	left: 420px;
+	top: -410px;
+	position: relative;
+	z-index: 2;
+	text-align: left;
+	font-style: italic;
+}
+
+.messageDiv {
+	border: 2px solid #A1A1A1;
+	background: #DDDDDD;
+	-moz-border-radius: 25px;
+	background-color: #FFFFFF;
+	border-radius: 25px;
+	width: 580px;
+	height: 410px;
+	left: 420px;
+	top: -410px;
+	position: relative;
+	z-index: 2;
+	text-align: right;
+	font-style: normal;
+}
+
+.profilephoto {
+	background: black;
+	-moz-border-radius: 25px;
+	background-color: #FFFFFF;
+	border-radius: 25px;
+	width: 600px;
+	height: 400px;
+	left: -100px;
+	top: -250px;
+	z-index: 2;
+	text-align: right;
+	font-style: normal;
+	position: relative;
+}
+
+.photoDiv {
+	border: 2px dotted #A1A1A1;
+	background: #DDDDDD;
+	-moz-border-radius: 25px;
+	background-color: black;
+	border-radius: 25px;
+	width: 400px;
+	height: 410px;
+	left: -7px;
+	top: 0px;
+	position: relative;
+	z-index: 3;
+	text-align: left;
+	font-style: italic;
+}
+
+.friendDiv {
+	border: 2px dotted #A1A1A1;
+	background: #DDDDDD;
+	-moz-border-radius: 25px;
+	background-color: #FFFFFF;
+	border-radius: 25px;
+	width: 400px;
+	height: 410px;
+	left: -7px;
+	top: 0px;
+	position: relative;
+	z-index: 2;
+	text-align: left;
+	font-style: italic;
+}
+
+.Header {
+	color: #FFFFFF;
+	margin-top: 2cm;
+	margin-right: 1cm;
+	margin-bottom: 15pt;
+	margin-left: 0cm;
+	line-height: 130%;
+	font-size: 25pt;
+	font-weight: bold;
+	font-family: Calibri, sans-serif;
+	padding-left: 7em;
+}
+
+.MsoNormal {
+	margin-top: 0cm;
+	margin-right: 0cm;
+	margin-bottom: 10pt;
+	margin-left: 0cm;
+	line-height: 115%;
+	font-size: 13pt;
+	font-weight: bold;
+	font-family: Calibri, sans-serif;
+	padding-left: 5em;
+}
+
+.updateDiv {
+	border: 2px solid #A1A1A1;
+	padding: 10px;
+	background: #DDDDDD;
+	-moz-border-radius: 25px;
+	background-color: #FFFFFF;
+	border-radius: 25px;
+	width: 1000px;
+	height: 700px;
+	left: 0px;
+	top: 800px;
+	position: absolute;
+	z-index: 2;
+	text-align: left;
+	font-style: italic;
+}
+
+ADDRESS {
+	margin-top: 1em;
+	padding-top: 1em;
+	border-top: thin dotted;
+}
+
+.p {
+	margin-right: 0cm;
+	margin-left: 0cm;
+	font-size: 12pt;
+	font-family: "Times New Roman", serif;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+
+@import url(http://fonts.googleapis.com/css?family=Cabin);
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	padding: 1rem 3rem;
+	font-family: 'Cabin', sans-serif;
+	line-height: 1.4;
+	min-width: 925px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.main-navigation {
+	overflow: hidden;
+	position: relative;
+	padding: 0 0 0 1rem; ul { list-style : none;
+	padding: 0;
+}
+
+li {
+	float: left;
+	width: 12rem;
+	height: 5rem;
+	margin: 0 0 0 -1rem;
+	position: relative;
+	&.
+	active
+	{
+	z-index
+	:
+	6;
+}
+
+}
+a {
+	position: relative;
+	display: inline-block;
+	color: white;
+	width: 100%;
+	height: 100%;
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+	font-size: 1.4rem;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+svg {
+	width: 120%;
+	height: 100%; // for tab shadows // also screws up Firefox // filter :
+	url(#shadow);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	pointer-events: none;
+}
+
+span {
+	position: relative;
+	padding: 1rem 0 0 3.3rem;
+	z-index: 2;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+
+.tab-1 {
+	z-index: 4;
+	svg
+	{
+	fill
+	:
+	url(#tab-1-bg);
+}
+
+}
+.tab-2 {
+	z-index: 3;
+	svg
+	{
+	fill
+	:
+	url(#tab-2-bg);
+}
+
+}
+.tab-3 {
+	z-index: 2;
+	svg
+	{
+	fill
+	:
+	url(#tab-3-bg);
+}
+
+}
+.tab-4 {
+	z-index: 1;
+	svg
+	{
+	fill
+	:
+	url(#tab-4-bg);
+}
+
+}
+/*  &::after {
+    content: "";
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    width: 798px;
+    height: 12px;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+    z-index: 5;
+  }*/
+}
+.main-content {
+	position: relative;
+	z-index: 10;
+	background: rgba(118, 160, 192, 1.0);
+	margin: -1.6rem 0 0 0;
+	padding: 3rem;
+	border-radius: 15px;
+	border-top-left-radius: 0;
+}
+
+.article {
+	background: white;
+	padding: 5rem;
+	border-radius: 8px; h2 { font-family : 'Oswald', sans-serif;
+	text-transform: uppercase;
+	font-size: 3rem;
+	color: rgba(118, 160, 192, 1.0);
+	margin: 0 0 0.5rem 0;
+}
+}
+}
