@@ -13,7 +13,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.example.HCI.stores.MessageStore;
 import com.example.HCI.stores.PostStore;
-import com.sun.rowset.internal.Row;
 
 /**
  * Servlet implementation class HCI

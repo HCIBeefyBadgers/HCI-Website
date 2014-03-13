@@ -7,50 +7,35 @@
 <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
 <!-- <link rel="stylesheet" type="text/css" href="myStyle.css"> -->
 <title>HCI Website</title>
-<!-- <form action="HCI" method="post">
-	<h1 class="Header">Messages</h1>
-	<ul>
-		<li><input type="submit" name="home" value="Home" id="shiny"></li>
-		<li><input type="submit" name="message" value="Messages"
-			id="shiny"></li>
-	</ul>
-	<hr>
-	Search:<input type="text" name="searchText" value="" class="">
-	<input type="submit" name="searchbtn" value="Search" id="shiny">
-</form> -->
 </head>
 <body>
 	<jsp:include page="PageHeader.jsp" />
 
-	<div class="Displaydiv">
-		<form action="HCI" method="post">
+	<div>
+		<form action="Messages" method="post">
 			<div class="friendDiv">
 				<ul>
-					<li><input type="submit" id="shiny" value="Joe Bloggs" />
+					<li><a href="#Joe" class="btn">Joe Bloggs</a>
 						<hr></li>
-					<li><input type="submit" id="shiny"
-						value="Hugh Major Masterson" />
+					<li><a href="#Hugh" class="btn">Hugh Major Masterson</a>
 						<hr></li>
-					<li><input type="submit" id="shiny"
-						value="Marshal Flynn Victor" />
+					<li><a href="#Hugh" class="btn">Marshal Flynn Victor</a>
 						<hr></li>
-					<li><input type="submit" id="shiny" value="Benjy Zeph Danniel" />
+					<li><a href="#Hugh" class="btn">Benjy Zeph Danniel</a>
 						<hr></li>
-					<li><input type="submit" id="shiny"
-						value="Braidy Codie Sessions" />
+					<li><a href="#Hugh" class="btn">Braidy Codie Sessions</a>
 						<hr></li>
-					<li><input type="submit" id="shiny"
-						value="Guy Sinclair Smalls" />
+					<li><a href="#Hugh" class="btn">Guy Sinclair Smalls</a>
 						<hr></li>
-					<li><input type="submit" id="shiny" value="Coty Ronald Toller" />
+					<li><a href="#Hugh" class="btn">Coty Ronald Toller</a>
 						<hr></li>
 				</ul>
 			</div>
 			<div class="submitDiv">
 
 				Message:<input type="text" id="Message" name="Message"
-					class="MsoNormal"><input type="submit" name="reply"
-					value="Send" id="shiny" />
+					class="MsoNormal" style="width:500px; height:50px;"><input type="submit" name="reply"
+					value="Send" class="btn-primary" />
 				<hr>
 			</div>
 			<div class="messageDiv">
@@ -59,7 +44,8 @@
 							.getAttribute("message");
 					if (lTweet == null) {
 				%>
-				<p class="MsoNormal">No updates found</p>
+				<br><br>
+				<p class="MsoNormal">No messages found</p>
 				<%
 					} else {
 						Iterator<MessageStore> iterator;
@@ -71,8 +57,6 @@
 				<br>
 				<p class="MsoNormal"><%=ms.getUser()%><br><%=ms.getMessage()%>
 				</p>
-				<br>
-				<hr>
 				<%
 					}
 					}
