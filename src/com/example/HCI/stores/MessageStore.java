@@ -1,7 +1,5 @@
 package com.example.HCI.stores;
 
-import java.util.UUID;
-
 public class MessageStore {
      String Message;
      String User;

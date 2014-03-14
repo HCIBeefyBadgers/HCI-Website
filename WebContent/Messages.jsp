@@ -13,7 +13,7 @@
 
 	<div>
 		<form action="Messages" method="post">
-			<div class="friendDiv">
+			<div class="">
 				<ul>
 					<li><a href="#Joe" class="btn"
 						style="padding: 10px; font-size: large;">Joe Bloggs</a>
@@ -39,9 +39,9 @@
 				</ul>
 			</div>
 			<div class="submitDiv">
-
-				Message:<input type="text" id="Message" name="Message"
-					class="MsoNormal" style="width: 500px; height: 50px;"><input
+				Message:<br>
+				<textarea type="text" id="Message" name="Message"
+					class="MsoNormal" cols="38" rows="2"></textarea><input
 					type="submit" name="reply" value="Send" class="btn-primary" />
 				<hr>
 			</div>

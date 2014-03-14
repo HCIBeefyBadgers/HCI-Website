@@ -42,50 +42,50 @@
 	<div class="row">
 		<div class='list-group gallery'>
             <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
-                <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png">
-                    <img class="img-responsive" alt="" src="http://placehold.it/320x320" />
+                <a class="thumbnail fancybox" rel="ligthbox" href="http://www.edinphoto.org.uk/0_P/0_photographers_w_r_and_s_-_castle_in_snow.jpg">
+                    <img class="img-responsive" alt="" src="http://www.edinphoto.org.uk/0_P/0_photographers_w_r_and_s_-_castle_in_snow.jpg" />
                     <div class='text-right'>
-                        <small class='text-muted'>Image Title</small>
+                        <small class='text-muted'>Edinburgh in Winter</small>
                     </div> <!-- text-right / end -->
                 </a>
             </div> <!-- col-6 / end -->
             <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
-                <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png">
-                    <img class="img-responsive" alt="" src="http://placehold.it/320x320" />
+                <a class="thumbnail fancybox" rel="ligthbox" href="http://hdw9.com/wp-content/uploads/2013/08/Beautiful-Horse-horses-22410583-1280-800.jpg">
+                    <img class="img-responsive" alt="" src="http://hdw9.com/wp-content/uploads/2013/08/Beautiful-Horse-horses-22410583-1280-800.jpg" />
                     <div class='text-right'>
-                        <small class='text-muted'>Image Title</small>
+                        <small class='text-muted'>Beautiful Horse</small>
                     </div> <!-- text-right / end -->
                 </a>
             </div> <!-- col-6 / end -->
             <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
-                <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png">
-                    <img class="img-responsive" alt="" src="http://placehold.it/320x320" />
+                <a class="thumbnail fancybox" rel="ligthbox" href="http://www.asianews.it/files/img/SRI_LANKA_(F)_1016_-_Elephant.jpg">
+                    <img class="img-responsive" alt="" src="http://www.asianews.it/files/img/SRI_LANKA_(F)_1016_-_Elephant.jpg" />
                     <div class='text-right'>
-                        <small class='text-muted'>Image Title</small>
+                        <small class='text-muted'>Sri Lankan Elephant</small>
                     </div> <!-- text-right / end -->
                 </a>
             </div> <!-- col-6 / end -->
             <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
-                <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png">
-                    <img class="img-responsive" alt="" src="http://placehold.it/320x320" />
+                <a class="thumbnail fancybox" rel="ligthbox" href="http://news.bbc.co.uk/media/images/47438000/jpg/_47438966_londoneye2pa.jpg">
+                    <img class="img-responsive" alt="" src="http://news.bbc.co.uk/media/images/47438000/jpg/_47438966_londoneye2pa.jpg" />
                     <div class='text-right'>
-                        <small class='text-muted'>Image Title</small>
+                        <small class='text-muted'>London Eye Fireworks</small>
                     </div> <!-- text-right / end -->
                 </a>
             </div> <!-- col-6 / end -->
             <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
-                <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png">
-                    <img class="img-responsive" alt="" src="http://placehold.it/320x320" />
+                <a class="thumbnail fancybox" rel="ligthbox" href="http://www.classicscarinsurance.co.uk/blog/wp-content/uploads/2011/04/612.jpg">
+                    <img class="img-responsive" alt="" src="http://www.classicscarinsurance.co.uk/blog/wp-content/uploads/2011/04/612.jpg" />
                     <div class='text-right'>
-                        <small class='text-muted'>Image Title</small>
+                        <small class='text-muted'>Classic Car</small>
                     </div> <!-- text-right / end -->
                 </a>
             </div> <!-- col-6 / end -->
             <div class='col-sm-4 col-xs-6 col-md-3 col-lg-3'>
-                <a class="thumbnail fancybox" rel="ligthbox" href="http://placehold.it/300x320.png">
-                    <img class="img-responsive" alt="" src="http://placehold.it/320x320" />
+                <a class="thumbnail fancybox" rel="ligthbox" href="http://iandone.files.wordpress.com/2011/09/dundee-university_5.jpg">
+                    <img class="img-responsive" alt="" src="http://iandone.files.wordpress.com/2011/09/dundee-university_5.jpg" />
                     <div class='text-right'>
-                        <small class='text-muted'>Image Title</small>
+                        <small class='text-muted'>Queen Mother Building</small>
                     </div> <!-- text-right / end -->
                 </a>
             </div> <!-- col-6 / end -->
