@@ -78,17 +78,17 @@ textarea {
 
 
 			</div>
-			<form action="<%=request.getContextPath()%>/Home" method="post">
-				<textarea class="form-control" name="Message"
-					placeholder="Hello, What you thinking?" rows="3" cols="50"></textarea>
+			<form action="<%=request.getContextPath()%>/Joe_Bloggs" method="post">
+				<textarea class="form-control" name="WallPost"
+					placeholder="Write Something..." rows="3" cols="50"></textarea>
 				<button class="btn btn-success" type="submit">Post!</button>
 			</form>
 			<hr>
 
 			<div class="updateDiv">
 				<%
-					List<PostStore> lTweet = (List<PostStore>) request
-							.getAttribute("Updates");
+					List<PostStore> lTweet = (List<PostStore>) session
+							.getAttribute("WallUpdates");
 					if (lTweet == null) {
 				%>
 				<p class="MsoNormal">No updates found</p>

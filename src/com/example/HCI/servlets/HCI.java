@@ -1,13 +1,17 @@
 package com.example.HCI.servlets;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.LinkedList;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.example.HCI.stores.MessageStore;
 import com.example.HCI.stores.PostStore;
@@ -15,12 +19,13 @@ import com.example.HCI.stores.PostStore;
 /**
  * Servlet implementation class HCI
  */
-@WebServlet({ "/HCI", "/Home", "/Messages", "/Photos", "/Search" })
+@WebServlet({ "/HCI", "/Home", "/Messages", "/Photos", "/Search", "/Joe_Bloggs" })
 public class HCI extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	LinkedList<PostStore> postList = new LinkedList<PostStore>();
+	LinkedList<PostStore> StatusList = new LinkedList<PostStore>();
+	LinkedList<PostStore> WallPostList = new LinkedList<PostStore>();
 	LinkedList<MessageStore> messageList = new LinkedList<MessageStore>();
-	String name = null;
+	String Name = null;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
@@ -45,7 +50,6 @@ public class HCI extends HttpServlet {
 		 */
 
 		if ((url[(url.length) - 1]).equals("Home")) {
-			request.setAttribute("Updates", postList);
 			RequestDispatcher rd = request.getRequestDispatcher("Home.jsp");
 			rd.forward(request, response);
 		}
@@ -79,12 +83,8 @@ public class HCI extends HttpServlet {
 		else if ((url[(url.length) - 1]).equals("Messages")) {
 			RequestDispatcher rd = request.getRequestDispatcher("Messages.jsp");
 			rd.forward(request, response);
-		}
-
-		else if (request.getParameter("logout") != null) {
-			name = null;
-
-			RequestDispatcher rd = request.getRequestDispatcher("Index.jsp");
+		} else if ((url[(url.length) - 1]).equals("Joe_Bloggs")) {
+			RequestDispatcher rd = request.getRequestDispatcher("Joe.jsp");
 			rd.forward(request, response);
 		}
 
@@ -96,43 +96,67 @@ public class HCI extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		String[] url = request.getRequestURI().split("/");
 
 		System.out.println("In the Post method");
+
+		String[] url = request.getRequestURI().split("/");
+		HttpSession session = request.getSession();
 
 		if (request.getParameter("login") != null) {
 			boolean loggedin = false;
 			String username = request.getParameter("username");
-			name = username;
+			Name = username;
 			String password = request.getParameter("password");
 
-			if (name.equals("name") && password.equals("pass")) {
+			if (password.equals("pass")) {
 				loggedin = true;
 			}
 
 			if (loggedin == true) {
-				request.setAttribute("Updates", postList);
+				session.setAttribute("UserName", Name);
+				request.setAttribute("Updates", StatusList);
 				RequestDispatcher rd = request.getRequestDispatcher("Home.jsp");
 				rd.forward(request, response);
 			} else {
-				request.setAttribute("invalidlogin", name);
+				request.setAttribute("invalidlogin", Name);
 				RequestDispatcher rd = request
 						.getRequestDispatcher("Index.jsp");
 				rd.forward(request, response);
 			}
 		}
 
-		if ((url[(url.length) - 1]).equals("Home")) {
-			if (!(request.getParameter("Status").isEmpty())
-					|| request.getParameter("Status") == null) {
+		else if ((url[(url.length) - 1]).equals("Home")) {
+			if (request.getParameter("Status") != null
+					&& !(request.getParameter("Status").isEmpty())) {
 				String post = request.getParameter("Status");
 				PostStore ps = new PostStore();
-				ps.setUser(name);
+				ps.setUser(Name);
 				ps.setPost(post);
 
-				postList.addFirst(ps);
+				StatusList.addFirst(ps);
 
-				request.setAttribute("Updates", postList);
+				session.setAttribute("StatusUpdates", StatusList);
+
+				/*
+				 * RequestDispatcher rd =
+				 * request.getRequestDispatcher("Home.jsp");
+				 * rd.forward(request,response);
+				 */
+			}
+			this.doGet(request, response);
+		}
+
+		else if ((url[(url.length) - 1]).equals("Joe_Bloggs")) {
+			if (request.getParameter("WallPost") != null
+					&& !(request.getParameter("WallPost").isEmpty())) {
+				String post = request.getParameter("WallPost");
+				PostStore ps = new PostStore();
+				ps.setUser(Name);
+				ps.setPost(post);
+
+				WallPostList.addFirst(ps);
+
+				session.setAttribute("WallUpdates", WallPostList);
 
 				/*
 				 * RequestDispatcher rd =
@@ -167,23 +191,29 @@ public class HCI extends HttpServlet {
 		 */
 
 		else if ((url[(url.length) - 1]).equals("Messages")) {
-			
+
 			if (request.getParameter("reply") != null) {
 				String message = request.getParameter("Message");
+				String Name = (String) session.getAttribute("UserName");
+
+				Calendar cal = Calendar.getInstance();
+				cal.getTime();
+				SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
 
 				MessageStore ms = new MessageStore();
-				ms.setUser("name");
+				ms.setUser(Name);
 				ms.setMessage(message);
+				ms.setTime(sdf.format(cal.getTime()));
 
 				messageList.addFirst(ms);
 
-				request.setAttribute("message", messageList);
+				session.setAttribute("message", messageList);
 
 				RequestDispatcher rd = request
 						.getRequestDispatcher("Messages.jsp");
 				rd.forward(request, response);
 			}
-			/*this.doGet(request, response);*/
+			/* this.doGet(request, response); */
 		}
 
 	}

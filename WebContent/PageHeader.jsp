@@ -16,6 +16,9 @@
 </head>
 
 <body>
+	<%
+		String Name = (String) session.getAttribute("UserName");
+	%>
 	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container">
 			<div class="navbar-header">
@@ -33,7 +36,7 @@
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
 					<li><a href="<%=request.getContextPath()%>/Home"><font
-							size="3px" color="White">Home</font></a></li>
+							size="3px" color="White">Profile - <%=Name %></font></a></li>
 				</ul>
 				<ul class="nav navbar-nav">
 					<li><a href="<%=request.getContextPath()%>/Messages"><font
@@ -43,7 +46,7 @@
 					<li><a href="<%=request.getContextPath()%>/Photos"><font
 							size="3px" color="White" >Photos</font></a></li>
 				</ul>
-				<form action=""
+				<form action="<%=request.getContextPath()%>/Logout.jsp"
 					class="navbar-form navbar-right" role="form">
 					<button type="submit" class="btn btn-warning">Log out</button>
 

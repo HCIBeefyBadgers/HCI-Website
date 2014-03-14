@@ -3,8 +3,15 @@ package com.example.HCI.stores;
 public class MessageStore {
      String Message;
      String User;
+     String Time;
      
-     public String getMessage(){
+     public String getTime() {
+		return Time;
+	}
+	public void setTime(String time) {
+		this.Time = time;
+	}
+	public String getMessage(){
     	 return Message;
      }
      public String getUser(){

@@ -12,6 +12,7 @@
 	rel="stylesheet">
 </head>
 <body>
+
 	<jsp:include page="PageHeader.jsp" />
 
 	<div class="container-fluid">
@@ -84,15 +85,8 @@
 					<div class="message-wrap col-lg-8">
 						<div class="msg-wrap" style="overflow: auto; height: 420px;">
 
-
 							<%
-								Calendar cal = Calendar.getInstance();
-								cal.getTime();
-								SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
-							%>
-
-							<%
-								List<MessageStore> lTweet = (List<MessageStore>) request
+								List<MessageStore> lTweet = (List<MessageStore>) session
 										.getAttribute("message");
 								if (lTweet == null) {
 							%>
@@ -115,7 +109,7 @@
 								</a>
 								<div class="media-body">
 									<small class="pull-right time"><i class="fa fa-clock-o"></i>
-										<%=sdf.format(cal.getTime())%></small>
+										<%=ms.getTime()%></small>
 
 									<h5 class="media-heading"><%=ms.getUser()%></h5>
 									<small class="col-lg-10"><%=ms.getMessage()%></small>
@@ -134,11 +128,12 @@
 						</div>
 
 						<br>
-						<form action="<%=request.getContextPath()%>/Messages" method="post">
+						<form action="<%=request.getContextPath()%>/Messages"
+							method="post">
 							<div class="send-wrap ">
 
-								<textarea class="form-control send-message" name="Message" rows="3"
-									placeholder="Write a reply..."></textarea>
+								<textarea class="form-control send-message" name="Message"
+									rows="3" placeholder="Write a reply..."></textarea>
 
 
 							</div>

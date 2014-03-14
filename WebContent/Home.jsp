@@ -78,28 +78,28 @@
 			
 		%>
 	</div> --%>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<style type="text/css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
 .pic {
 	margin-top: 50px;
 	width: 120px;
@@ -145,7 +145,9 @@ textarea {
 <body>
 	<jsp:include page="PageHeader.jsp" />
 	<br>
-
+	<%
+		String Name = (String) session.getAttribute("UserName");
+	%>
 	<link
 		href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
 		rel="stylesheet">
@@ -160,7 +162,7 @@ textarea {
 						src="http://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/twDq00QDud4/s120-c/photo.jpg"
 						alt="...">
 					<div class="name">
-						<small>*Name*?</small>
+						<small><%=Name%></small>
 					</div>
 				</div>
 
@@ -177,8 +179,8 @@ textarea {
 
 			<div class="updateDiv">
 				<%
-					List<PostStore> lTweet = (List<PostStore>) request
-							.getAttribute("Updates");
+					List<PostStore> lTweet = (List<PostStore>) session
+							.getAttribute("StatusUpdates");
 					if (lTweet == null) {
 				%>
 				<p class="MsoNormal">No updates found</p>
@@ -204,13 +206,13 @@ textarea {
 
 	</div>
 
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
 </body>
 </html>
