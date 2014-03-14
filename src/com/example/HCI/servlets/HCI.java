@@ -123,9 +123,9 @@ public class HCI extends HttpServlet {
 		}
 
 		if ((url[(url.length) - 1]).equals("Home")) {
-			if (!(request.getParameter("Message").isEmpty())
-					|| request.getParameter("Message") == null) {
-				String post = request.getParameter("Message");
+			if (!(request.getParameter("Status").isEmpty())
+					|| request.getParameter("Status") == null) {
+				String post = request.getParameter("Status");
 				PostStore ps = new PostStore();
 				ps.setUser(name);
 				ps.setPost(post);
@@ -166,21 +166,25 @@ public class HCI extends HttpServlet {
 		 * rd.forward(request,response); }
 		 */
 
-		else if (request.getParameter("reply") != null) {
-			String message = request.getParameter("Message");
+		else if ((url[(url.length) - 1]).equals("Messages")) {
+			
+			if (request.getParameter("reply") != null) {
+				String message = request.getParameter("Message");
 
-			MessageStore ms = new MessageStore();
-			ms.setUser(name);
-			ms.setMessage(message);
+				MessageStore ms = new MessageStore();
+				ms.setUser("name");
+				ms.setMessage(message);
 
-			messageList.add(ms);
+				messageList.addFirst(ms);
 
-			request.setAttribute("message", messageList);
+				request.setAttribute("message", messageList);
 
-			RequestDispatcher rd = request.getRequestDispatcher("Messages.jsp");
-			rd.forward(request, response);
+				RequestDispatcher rd = request
+						.getRequestDispatcher("Messages.jsp");
+				rd.forward(request, response);
+			}
+			/*this.doGet(request, response);*/
 		}
 
 	}
-
 }

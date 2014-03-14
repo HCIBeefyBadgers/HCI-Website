@@ -169,7 +169,7 @@ textarea {
 
 			</div>
 			<form action="<%=request.getContextPath()%>/Home" method="post">
-				<textarea class="form-control" name="Message"
+				<textarea class="form-control" name="Status"
 					placeholder="Hello, What you thinking?" rows="3" cols="50"></textarea>
 				<button class="btn btn-success" type="submit">Post!</button>
 			</form>
