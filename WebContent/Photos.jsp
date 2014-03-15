@@ -21,7 +21,7 @@
 		//FANCYBOX
 		//https://github.com/fancyapps/fancyBox
 		$(".fancybox").fancybox({
-			openEffect : "none",
+			openEffect : "elastic",
 			closeEffect : "elastic"
 		});
 	});

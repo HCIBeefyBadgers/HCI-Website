@@ -42,6 +42,7 @@ public class HCI extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("In the Get method");
 		String[] url = request.getRequestURI().split("/");
 
 		/*
@@ -84,6 +85,7 @@ public class HCI extends HttpServlet {
 			RequestDispatcher rd = request.getRequestDispatcher("Messages.jsp");
 			rd.forward(request, response);
 		} else if ((url[(url.length) - 1]).equals("Joe_Bloggs")) {
+			System.out.println("In the Joe_Bloggs Statement");
 			RequestDispatcher rd = request.getRequestDispatcher("Joe.jsp");
 			rd.forward(request, response);
 		}
